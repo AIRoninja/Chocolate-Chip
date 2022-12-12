@@ -1,3 +1,6 @@
+int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
+int tintDayMode=255, tintDayModeOpacity=50;
+//
 void homeScreen() {
   println("Arrived at Home Screen"); //Testing for Splash Screen Start Button
   /* Home Screen Expectations
@@ -5,11 +8,26 @@ void homeScreen() {
   - 9 evenly spaced rectangles, Assignment #3
   - Quit Button and Reset Button (Splash Screen Start Button)
   - In each: image, text, 2D Shape, Button
-  - Narartive through the 9 rectangels
+  - Narrative through the 9 rectangles
   - See Case Study
   - Note: must have one image with aspect ratio
   */
   //
 }//End homeScreen
+//
+void backgroundWhiteScreen() {
+  fill(white);
+  noStroke();
+  rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight );
+  strokeWeight(1); //Reset: 1 pixel
+  fill(white); //Reset: white
+}//End backgroundWhiteScreen()
+//
+void backgroundImage() {
+  backgroundWhiteScreen();
+  tint( tintDayMode, tintDayModeOpacity ); //Day Mode, see ternary operator
+  //tint(  ); //Night Mode, see ternary operator
+  image( backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
+}//End backgroundImage
 //
 //End Home Screen Subprogram
