@@ -1,8 +1,19 @@
-PImage backgroundImage, quitButtonImage;
+PImage backGroundImage, quitButtonImage;
 //
 void imagePopulation() {
-  backgroundImage = loadImage ("../Images/1371607143890.jpeg");
+  backGroundImage = loadImage ("../Images/genji.jpg");
 }//End imagePopulation
+//
+void imageNightMode() {
+  //if ( nightMode==false ) tint( tintDayMode, tintDayModeOpacity ); //Day Mode, see ternary operator
+  //if ( nightMode==true ) tint( tintRed, tintGreen, tintBlue, tintNightModeOpacity ); //Night Mode, see ternary operator
+  //
+  if ( nightMode==true ) {
+    tint( tintRed, tintGreen, tintBlue, tintNightModeOpacity );
+  } else {
+    tint( tintDayMode, tintDayModeOpacity );
+  }
+}//End imageNightMode
 //
 void quitButtonImage() {
   quitButtonImage = backGroundImage;
