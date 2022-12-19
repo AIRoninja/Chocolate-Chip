@@ -2,7 +2,7 @@ int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float quitX, quitY, quitWidth, quitHeight;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
 int tintDayMode=255, tintDayModeOpacity=50;
-int tintRed=64, tintGreen=64, tintBlue=40, tintNightModeOpacity=85; //BLUE should be Zero or as close to it
+int tintRed=54, tintGreen=104, tintBlue=40, tintNightModeOpacity=85; //BLUE should be Zero or as close to it
 //
 /* Home Screen Expectations
  - Background image using tint()
@@ -31,7 +31,7 @@ void backgroundWhiteScreen() {
 //
 void backgroundImage() {
   backgroundWhiteScreen();
-  imageNightMode(1);
+  imageNightMode();
   image( backGroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
 }//End backgroundImage
 //
